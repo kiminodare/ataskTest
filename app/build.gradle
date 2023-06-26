@@ -67,13 +67,6 @@ android {
             // ...
         }
     }
-
-    sourceSets {
-        builtInCameraGreen{
-            java.srcDirs += 'src/main/java'
-            res.srcDirs += 'src/builtInCameraGreen/res'
-        }
-    }
 }
 
 dependencies {
