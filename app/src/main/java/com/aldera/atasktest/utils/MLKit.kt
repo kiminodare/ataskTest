@@ -41,11 +41,6 @@ class MLKit {
                                 resultsMath.add(MathResults(text, formattedResult))
                             } catch (e: Exception) {
                                 Log.d("TAG", "TextRecognition: ${e.message}")
-                                Toast.makeText(
-                                    context,
-                                    "Error: ${e.message}",
-                                    Toast.LENGTH_SHORT
-                                ).show()
                             }
                         }
                     } else {
@@ -60,11 +55,6 @@ class MLKit {
                             resultsMath.add(MathResults(splitText[0], formattedResult))
                         } catch (e: Exception) {
                             Log.d("TAG", "TextRecognition: ${e.message}")
-                            Toast.makeText(
-                                context,
-                                "Error: ${e.message}",
-                                Toast.LENGTH_SHORT
-                            ).show()
                         }
                     }
                 } else {
@@ -85,11 +75,6 @@ class MLKit {
                                 }
                             } catch (e: Exception) {
                                 Log.d("TAG", "TextRecognition: ${e.message}")
-                                Toast.makeText(
-                                    context,
-                                    "Error: ${e.message}",
-                                    Toast.LENGTH_SHORT
-                                ).show()
                             }
                         } else {
                             try {
@@ -103,11 +88,6 @@ class MLKit {
                                 resultsMath.add(MathResults(splitMatches[0], formattedResult))
                             } catch (e: Exception) {
                                 Log.d("TAG", "TextRecognition: ${e.message}")
-                                Toast.makeText(
-                                    context,
-                                    "Error: ${e.message}",
-                                    Toast.LENGTH_SHORT
-                                ).show()
                             }
                         }
                     }
@@ -120,7 +100,6 @@ class MLKit {
             }
             .addOnFailureListener { e ->
                 Log.d("TAG", "TextRecognition: ${e.message}")
-                Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
 }
